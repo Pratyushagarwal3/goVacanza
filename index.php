@@ -5,16 +5,7 @@
 <title>GOVACANZA </title></head>
 <body>
  <h1> NIT CALICUT</h1>
- <form action="index.php" method="post">
-  <input type="submit" name="login" value="login">
- </form>
+ <a href="b.php">LOGIN</a>
 </body>
 </html>
-<?php
-if($_POST['login'])
-{
-?>
-<a href="b.php"></a>
-<?php
-}
-?>
+
