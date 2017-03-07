@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>goVacanza</title>
-
+	<title>vacXcursion</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 
@@ -16,7 +15,7 @@
 		  <div class="container">
 			 <div class="top-nav">
 						<div class="logo">
-						<a href="#"><img src="images/logo.png" id="section-1" class="img-responsive" alt=""/></a>
+						<a href="#"><img src="images/log.png" id="section-1" class="img-responsive" alt=""/></a>
 						</div>
 						<div class="menu">
 						<ul id="nav">
@@ -236,7 +235,7 @@
 	 <div class="container">
 		 <div class="fotter-grids">
 			 <div class="col-md-4 fotter-left">
-			 <img src="images/fotter-logo.png" alt="">
+			 <img src="images/log.png" alt="">
 			
 			 </div>
 			 
@@ -258,7 +257,7 @@
 </div>  
 
  <div class="copyright text-center">
-<p><a href="http://www.goVacanza.com">www.goVacanza.com</a></p>
+<p><a href="https://vacxcursion.herokuapp.com">www.vacXcursion.com</a></p>
 </div> 
 </body>
 </html>
