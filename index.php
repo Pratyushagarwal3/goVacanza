@@ -23,7 +23,7 @@
 							 <li><a href="#section-2">About</a></li>
 							 <li><a href="#section-3">Top tours</a></li>
 							 <li><a href="#section-4">Contact</a></li>
-							 <li>LogIn</li>
+							<li><a href="b.php">LogIn</a></li>
 					
 							 
  <div class="clearfix"></div>
