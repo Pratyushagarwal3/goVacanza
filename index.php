@@ -37,28 +37,20 @@
  <form>
 <div class="row">
   <div class="col-sm-5"></div>
-  <div class="col-sm-4"><div class="btn-group">
+  <div class="col-sm-4"> <div class="btn-group">
   <button type="button" class="btn btn-danger">Destination</button>
   <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="caret"></span>
     <span class="sr-only">Toggle Dropdown</span>
   </button>
   
-  <?php 
-  $sql = "SELECT dest_name FROM destination";
-        $result = $conn->query($sql);
-      
-       if ($result->num_rows > 0) {
-      
-	 ?>
-	 <ul class="dropdown-menu">  
-	 <?php
-    while($row = $result->fetch_assoc()) { ?>
-	<li> <?php echo $row["dest_name"]; ?> </li>
-	   <?php
-	}
-	} ?>
-  </ul> 
+   <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
 </div>
 <div class="btn-group">
   <button type="button" class="btn btn-danger">Budget</button>
@@ -73,16 +65,17 @@
     <li role="separator" class="divider"></li>
     <li><a href="#">Separated link</a></li>
   </ul>
+	</div>
   <button type="submit" class="btn btn-default"> <span class="glyphicon glyphicon-search"></span></button>
 </div>
-</div>
+
   <div class="col-sm-4"></div>
-  </form>
-</div>
+  
 </div>
 			
 
-		 </div>
+		 
+	<div>
 		 <!--/container-->
 	 </div>
 <!--/sticky-->
