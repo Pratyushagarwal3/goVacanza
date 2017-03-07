@@ -1,10 +1,12 @@
 
 
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>goVacanza</title>
-<link href="bootstrap-3.3.7-dist" rel='stylesheet' />
+
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
 
@@ -17,65 +19,23 @@
 		  <div class="container">
 			 <div class="top-nav">
 						<div class="logo">
-						<a href="#"><img src="images/log.png" id="section-1" class="img-responsive" alt=""/></a>
+						<a href="#"><img src="images/logo.png" id="section-1" class="img-responsive" alt=""/></a>
 						</div>
 						<div class="menu">
 						<ul id="nav">
 							 <li><a href="#section-1">Home</a></li>
-							 <li><a href="#section-2">Login</a></li>
-							 <li><a href="#section-3">New Offers</a></li>
-							 
+							 <li><a href="#section-2">About</a></li>
+							 <li><a href="#section-3">Top tours</a></li>
+							 <li><a href="#section-4">Contact</a></li>
 							 
  <div class="clearfix"></div>
 						 </ul>
 						 </div>
 			 </div>
-			
 			  <div class="clearfix"> </div>
-			   <!-- Split button -->
-<!-- Split button -->
- <form>
-<div class="row">
-  <div class="col-sm-5"></div>
-  <div class="col-sm-4"> <div class="btn-group">
-  <button type="button" class="btn btn-danger">Destination</button>
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  
-   <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="btn-group">
-  <button type="button" class="btn btn-danger">Budget</button>
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li role="separator" class="divider"></li>
-    <li><a href="#">Separated link</a></li>
-  </ul>
-	</div>
-  <button type="submit" class="btn btn-default"> <span class="glyphicon glyphicon-search"></span></button>
-</div>
-
-  <div class="col-sm-4"></div>
-  
-</div>
 			
 
-		 
-	<div>
+		 </div>
 		 <!--/container-->
 	 </div>
 <!--/sticky-->
@@ -279,7 +239,7 @@
 	 <div class="container">
 		 <div class="fotter-grids">
 			 <div class="col-md-4 fotter-left">
-			 <img src="images/fotterlogo.png" alt="">
+			 <img src="images/fotter-logo.png" alt="">
 			
 			 </div>
 			 
@@ -301,10 +261,7 @@
 </div>  
 
  <div class="copyright text-center">
-<p><a href="https://vacxcursion.herokuapp.com">www.vacXcursion.com</a></p>
+<p><a href="http://www.goVacanza.com">www.goVacanza.com</a></p>
 </div> 
 </body>
 </html>
-
-
-
