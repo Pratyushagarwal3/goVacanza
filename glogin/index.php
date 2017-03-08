@@ -13,7 +13,7 @@ if (isset($_SESSION['token'])) {
 	$gClient->setAccessToken($_SESSION['token']);
 }
 
-if ($gClient->getAccessToken()) {
+/*if ($gClient->getAccessToken()) {
 	echo "<script>alert('i got access token ');</script>";
 	$userProfile = $google_oauthV2->userinfo->get();
 	//DB Insert
@@ -24,7 +24,7 @@ if ($gClient->getAccessToken()) {
 	$_SESSION['token'] = $gClient->getAccessToken();
 } else {
 	$authUrl = $gClient->createAuthUrl();
-}
+}*/
 
 if(isset($authUrl)) {
 	echo '<a href="'.$authUrl.'"><img src="images/glogin.png" alt=""/></a>';
