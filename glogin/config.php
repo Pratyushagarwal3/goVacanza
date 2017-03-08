@@ -5,8 +5,8 @@ include_once("src/contrib/Google_Oauth2Service.php");
 ######### edit details ##########
 $clientId = '840118252154-vo7dgkfivcjd0mj0b370lal1q9brehoe.apps.googleusercontent.com'; //Google CLIENT ID
 $clientSecret = '7XiGwJbdrssoZw4PBwrt4s-G'; //Google CLIENT SECRET
-$redirectUrl = 'http://localhost/project/glogin';  //return url (url to script)
-$homeUrl = 'http://localhost/project/glogin';  //return to home
+$redirectUrl = 'https://vacxcursion.herokuapp.com';  //return url (url to script)
+$homeUrl = 'https://vacxcursion.herokuapp.com';  //return to home
 
 
 
