@@ -121,18 +121,15 @@
 	   <div class="container">		  
 		 <div class="col-md-4 about-grids">
 			 <h4><span class="icon1"></span>Best Destinations</h4>
-			 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-			 doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+			 <p></p>
 		 </div>
 		 <div class="col-md-4 about-grids grid2">
 			 <h4><span class="icon2"></span>Trust & Safety</h4>
-			 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-			 doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+			 <p></p>
 		 </div>
 		 <div class="col-md-4 about-grids">
 			 <h4><span class="icon3"></span>Combine & Save</h4>
-			 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-			 doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+			 <p></p>
 		 </div>
 	 </div>
 </div>
@@ -153,7 +150,7 @@
 						     <img src="images/t1.jpg" class="img-responsive" alt=""/></a>
 							<div class="tour-caption">
 							<span> </span>
-							<p>Phu Quoc Resort & Spa</p>
+							<p></p>
 							</div>
 
 						</div>
@@ -164,7 +161,7 @@
 						     <img src="images/t2.jpg" class="img-responsive" alt=""/></a>
 							 <div class="tour-caption">
 							 <span> </span>
-							 <p>Phu Quoc Resort & Spa</p>
+							 <p></p>
 						     </div>
 
 						</div>
@@ -175,7 +172,7 @@
 						     <img src="images/t3.jpg" class="img-responsive" alt=""/></a>
 							 <div class="tour-caption">
 							 <span> </span>
-							 <p>Phu Quoc Resort & Spa</p>
+							 <p></p>
 							 </div>
 						</div>
 					</div>				
@@ -185,7 +182,7 @@
 						     <img src="images/t4.jpg" class="img-responsive" alt=""/></a>
 							 <div class="tour-caption">
 							 <span> </span>
-							<p>Phu Quoc Resort & Spa</p>
+							<p></p>
 							</div>
 						</div>
 					</div>	
@@ -195,7 +192,7 @@
 						     <img src="images/t5.jpg" class="img-responsive" alt=""/></a>
 							 <div class="tour-caption">
 							 <span> </span>
-							 <p>Phu Quoc Resort & Spa</p>
+							 <p></p>
 							 </div>
 						</div>
 					</div>			
@@ -205,7 +202,7 @@
 						     <img src="images/t6.jpg" class="img-responsive" alt=""/></a>
 							 <div class="tour-caption">
 							 <span> </span>
-							<p>Phu Quoc Resort & Spa</p>
+							<p></p>
 							</div>
 						</div>
 			      </div>
@@ -215,7 +212,7 @@
 							<img src="images/t7.jpg" class="img-responsive" alt=""/></a>
 							<div class="tour-caption">
 							<span> </span>
-							<p>Phu Quoc Resort & Spa</p>
+							<p></p>
 							</div>
 						</div>
 			      </div>
@@ -225,7 +222,7 @@
 						     <img src="images/t8.jpg" class="img-responsive" alt=""/></a>
 							 <div class="tour-caption">
 							 <span> </span>
-							 <p>Phu Quoc Resort & Spa</p>
+							 <p></p>
 							 </div>
 					   </div>
 			      </div>
