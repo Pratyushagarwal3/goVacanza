@@ -260,7 +260,7 @@
 <p><a href="https://vacxcursion.herokuapp.com">www.vacXcursion.com</a></p>
 </div> 
 	<?php
-	echo "welcokme hello world";
+	echo "welcokme hello world"
 	?>
 </body>
 </html>
