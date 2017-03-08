@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+
 <html>
 <head>
 	<title>vacXcursion</title>
@@ -259,6 +259,9 @@
  <div class="copyright text-center">
 <p><a href="https://vacxcursion.herokuapp.com">www.vacXcursion.com</a></p>
 </div> 
+	<?php
+	echo "welcokme hello world";
+	?>
 </body>
 </html>
 
