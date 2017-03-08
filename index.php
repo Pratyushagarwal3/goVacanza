@@ -261,7 +261,7 @@
 </div> 
 	<?php
 	echo "welcokme hello world"
-	?>
+	
 </body>
 </html>
 
