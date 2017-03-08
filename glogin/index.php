@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 include_once("config.php");
-include_once("includes/functions.php");
+//include_once("includes/functions.php");
 
 if(isset($_REQUEST['code'])){
 	$gClient->authenticate();
