@@ -3,22 +3,19 @@ include_once('classpackage.php');
 require_once('classhotel.php');
 require_once('classvehicle.php');
 $packobj=new Package;
-$destname=$_POST['destination'];
-$price=$_POST['agileinfo_search'];
+$destname=$_GET['destination'];
+$price=$_GET['agileinfo_search'];
 $b=array();
-$b=$packobj->getpackage($destname,$price);
+$b=$packobj->displayPackageDetails($destname,$price);
 
-	
-		?>
-		
-	
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
  <title>Package view</title> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Staple Food Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content=" Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Custom Theme files -->
@@ -49,7 +46,7 @@ $b=$packobj->getpackage($destname,$price);
 						<ul> 
 							
 							<li class="head-dpdn">
-								<a href="offers.html"><i class="fa fa-gift" aria-hidden="true"></i> New Offers</a>
+								<a href="offers.php"><i class="fa fa-gift" aria-hidden="true"></i> New Offers</a>
 							</li> 
 							<li class="head-dpdn">
 								<a href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
@@ -106,83 +103,146 @@ $b=$packobj->getpackage($destname,$price);
 	</div>
 	<div class="products">	 
 		<div class="container">
-								<div class="products">	 
-		                            <h3 class="w3ls-title w3ls-title1">Available Packages</h3>  
-				    </div>
-				</div>
-				</div>
+		<div class="products">	 
+		 <h3 class="w3ls-title w3ls-title1">Available Packages</h3>  
+		  </div>
+		  </div>
+		  </div>
 	<!-- //banner -->   
 	<!-- add-products -->
 	<div class="products">	 
 		<div class="container">
-			
-					
-					<div class="clearfix"> </div>
+		<div class="clearfix"> </div>
 				</div>
 				<?php for($k=0;$k<$b[1];$k++)
                   {
-	                  
-							?>
+					  
+					  $packid=$b[0][$k][0];
+	                ?>
 				<div class="products-row">
 					<div class="col-sm-6 col-sm-4 product-grids">
 						<div class="flip-container">
 							<div class="flipper agile-products">
 								<div class="front"> 
-								  <img src="<?php echo $b[0][$k][1]?>" class="img-responsive" alt="img">
+								  <img src="<?php echo $b[0][$k][8]?>" class="img-responsive" alt="img">
 									<div class="agile-product-text">              
 										<h5>Packageid:<?php echo $b[0][$k][0]?></h5>  
 									</div> 
 								</div>
 								<div class="back">
-									<h4><?php $hid= $b[0][$k][5];
+									<h4><?php $hid= $b[0][$k][2];
 									$hotelobj=new Hotel;
 									$y=array();
-									$y=$hotelobj->gethotel($hid);
-									echo $y[0][0]; echo ','; echo  $y[0][1];?></h4>
-									<p><?php $vid= $b[0][$k][6];
+									$y=$hotelobj->gethotelDetails($hid);
+									$star=$y[0][3];
+									echo $y[0][2].'<br>';?> <img src="images/star<?php echo $star?>.png" width="75" height="20">
+								    </h4>
+									<p><?php $vid= $b[0][$k][3];
 									$vehicleobj=new Vehicle;
-									$y=$vehicleobj->getvehicle($vid);?>Vehicle in package:
-									<?php echo $y;?></p>
-									<p><?php echo $b[0][$k][3]?> Nights and<?php echo $b[0][$k][2]?> Days.</p>
-									<h6><?php echo $b[0][$k][4]?><sup></sup></h6>
-									<form action="#" method="post">
-										<input type="hidden" name="cmd" value="_cart">
-										<input type="hidden" name="add" value="1"> 
-										<input type="hidden" name="w3ls_item" value="Fish salad"> 
-										<input type="hidden" name="amount" value="3.00"> 
-										<button type="submit" class="w3ls-cart pw3ls-cart"><i class="fa fa-cart-plus" aria-hidden="true"></i> Book Package</button>
-										<span class="w3-agile-line"> </span>
-										<a href="#" data-toggle="modal" data-target="#myModal1">View Details</a>
-									</form>
-								</div>
+									$x=array();
+									$x=$vehicleobj->getvehicleDetails($vid);?>Vehicle in package:
+									<?php echo $x[0][2];?></p>
+									<p><?php echo $b[0][$k][7]?> Nights and <?php echo $b[0][$k][6]?> Days.</p>
+									<p><?php echo $b[0][$k][5]?></p>
+									 <a href="#" data-toggle="modal" data-target="#<?php echo $packid?>">View Details</a>
+									  <span class="w3-agile-line"> </span>
+									<a href="#" data-toggle="modal" data-target="#myModal2">Customize</a>
+									</div>
 							</div>
+							
 						</div> 
+						<br>
+					<br>
+					<br>
+					<br>
+					<br>
 					</div> 
-					<?php }
-                               ?>
+					<div class="modal video-modal fade" id="<?php echo $packid?>" tabindex="-1" role="dialog" aria-labelledby="myModal1">
+		<div class="modal-dialog" role="document">
+		<div class="modal-content">
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				
+		 <div class="row equal">
+          <div class="col-xs-6 col-sm-4">
+         </div>
+		 <div class="col-xs-6 col-sm-4">
+        <h3>Details of package </h3>
+		<br>
+		<br>
+		<h4><?php echo $b[0][$k][6]?> days and <?php echo $b[0][$k][7]?> nights package</h4>
+		<br>
+	    <h4>Destination Name:&nbsp <?php echo $b[0][$k][1]?></h4>
+		<br>
+		<h4>Hotel Name:&nbsp <?php echo $y[0][2]?></h4>
+		<br>
+		<h4>Rooms in package:&nbsp <?php $a=array();
+		 $a=$packobj->getpackage_room($packid);?>
+		  <?php if($a[0][1]!=0) {echo $a[0][1]." "."Single Room"."<br>";}?>
+		  <?php if($a[0][2]!=0) {echo $a[0][2]." "."Double Room"."<br>";}?>
+		  <?php if($a[0][3]!=0) {echo $a[0][3]." "."Mini Suite"."<br>";}?>
+		  </h4>
+		<br>  
+        <h4>Contact Number:&nbsp <?php echo $y[0][4]?></h4>		 
+		<br>
+		<h4> vehicle included: <?php echo $b[0][$k][4]." ". $x[0][2];?> </h4>		 
+		<br>
+		<h4>Worth:&nbsp Rs &nbsp<?php echo $b[0][$k][5]?>/-</h4>	
+        <br>
+		<button  id="bu<?php echo $k?>" class="btn btn-default" name="book"> Book Package </button>
+		<br>
+		<br>
+		
+		<div id="<?php echo $k?>">
+		<form action="classpackage.php" method="get">
+      Date: <input type="text" name="date" id="datepicker<?php echo $k?>">
+      <input type="submit" name="book" value="Book Now">
+	  </form>
+	  <br>
+	  <br>
+	 </div>
+	 </div>
+    <div class="col-xs-6 col-sm-4">
+      </div>
+     </div>
+	</section>
+	</div>
+	</div>
+	</div>
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+	$(document).ready(function(){
+		
+		$("#<?php echo $k?>").hide();
+		$("#<?php echo $packid ?>").hide();
+	$("#bu<?php echo $k ?>").click(function(){
+			$("#<?php echo $k?>").show();
+			});
+			$( function() {
+    $( "#datepicker<?php echo $k?>" ).datepicker();
+  } );
+  $("#view").click(function(){
+        $("#<?php echo $packid?>").show();
+        });
+		
+		
+	});
+		</script>
+					
+	       <?php }
+				  ?>
 					<div class="clearfix"> </div>
 				</div>
 		 <div class="clearfix"> </div> 
 	</div>
+    <br>
+	<br>
+	<br>
 	
-	<!-- //add-products --> 
-	<!-- order -->   	
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br><br>
-	<br>
-	<br>
-	<br>
-	<br><br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	<div class="wthree-order">  
 		<!--<img src="images/i2.jpg" class="w3order-img" alt=""/>-->
 		<div class="container">
@@ -234,41 +294,10 @@ $b=$packobj->getpackage($destname,$price);
 	<br>
 	<div class="copyw3-agile"> 
 		<div class="container">
-			<p>All rights reserved | Design by <a href="https://vacxcursion.herokuapp.com">vacXcursion</a></p>
+			<p>All rights reserved | Design by <a href="https://vacxcursion.000webhost.com">vacXcursion</a></p>
 		</div>
 	</div>
-	<!-- //footer --> 
-	<!-- cart-js -->
-	<script src="js/minicart.js"></script>
-	<script>
-        w3ls.render();
-
-        w3ls.cart.on('w3sb_checkout', function (evt) {
-        	var items, len, i;
-
-        	if (this.subtotal() > 0) {
-        		items = this.items();
-
-        		for (i = 0, len = items.length; i < len; i++) { 
-        		}
-        	}
-        });
-    </script>  
-	<!-- //cart-js -->	
-	<!-- Owl-Carousel-JavaScript -->
-	<script src="js/owl.carousel.js"></script>
-	<script>
-		$(document).ready(function() {
-			$("#owl-demo").owlCarousel ({
-				items : 3,
-				lazyLoad : true,
-				autoPlay : true,
-				pagination : true,
-			});
-		});
-	</script>
-	<!-- //Owl-Carousel-JavaScript -->  
-	<!-- start-smooth-scrolling -->
+	
 	<script src="js/SmoothScroll.min.js"></script>  
 	<script type="text/javascript" src="js/move-top.js"></script>
 	<script type="text/javascript" src="js/easing.js"></script>	
@@ -285,23 +314,9 @@ $b=$packobj->getpackage($destname,$price);
 	<!-- smooth-scrolling-of-move-up -->
 	<script type="text/javascript">
 		$(document).ready(function() {
-			/*
-			var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-			};
-			*/
-			
 			$().UItoTop({ easingType: 'easeOutQuart' });
-			
 		});
 	</script>
-	<!-- //smooth-scrolling-of-move-up --> 
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>
+	<script src="js/bootstrap.js"></script>
 </body>
 </html>
