@@ -3,25 +3,84 @@ require_once('conn.php');
 class Vehicle extends Connect
 {
 	
-	public function getvehicle($var)
+	public function getvehicleDetails($var)
 	{
 		$x=new Connect;
-		$sql="Select vehicle_type from vehicle where vehicle_id='$var'";
+		$sql="Select * from vehicle where vehicle_id='$var'";
 		$c= $x->getconnect();
 		$result = $c->query($sql);
-		$a;
+		$a=array();
 		if ($result->num_rows > 0) 
 	   {
-       while($row = $result->fetch_assoc()) 
+       while($row = $result->fetch_array()) 
 	   {
-		
-				$a=$row['vehicle_type'];
+	       $a[]=array($row[0],$row[1],$row[2],$row[3],$row[4],$row[5]);
 		}
        }
 		return $a;
     }
+	public function getAvailability($vid,$date,$days,$number,$dest,$price)
+	{
+		$x=new Connect;
+		$c=$x->getconnect();
+		if($res=$c->query("Select no_of_vehicle from book_detail where vehicle_id='$vid' order by date desc;"))
+		{
+			if($res->num_rows>0)
+			{
+				$total_vehicle=0;
+			    while($row=$res->fetch_assoc())
+				{
+				    $total_vehicle+=$row['no_of_vehicle'];	
+				}	
+                if($res1=$c->query("Select total_no from vehicle where vehicle_id='$vid' and dest_name='$dest';"))
+				{
+					if($row1=$res1->fetch_assoc())
+					{
+						if(($row1['total_no']-$total_vehicle)>=$number)
+						{
+							return 1;
+						}
+						else{
+							
+							$date1= new DateTime($date);
+							$vehicle_occupied=0;
+							if($res1=$c->query("Select date,no_of_vehicle from book_detail where vehicle_id='$vid';"))
+				            {
+							while($row=$res->fetch_assoc())
+							{
+		                    $date2=new DateTime($row['date']);
+		                    $interval = $date1->diff($date2);
+							if(($interval->d)<$days)
+							  {
+								$vehicle_occupied+=$row['no_of_vehicle'];
+							  }
+							}
+							}
+							if(($row1['total_no']-($vehicle_occupied))>=$number)
+							{
+								return 1;
+							}
+							else{
+								//echo "<script type='text/javascript'>alert('sorry!!!!Vehicle is not available');</script>";
+		                        return 0;
+							}
+							
+						}
+					}
+				}
+				
+			}
+			else
+			{
+				return 1;
+			}
+		}
 		
+		
+	}	
     
 	
-}	 
+}
+
+ 
 ?>
